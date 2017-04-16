@@ -1,27 +1,27 @@
-# Harmony Jekyll theme general configurations 
+# Harmony Jekyll theme general configurations
 
 # Base URL
-baseurl: /harmony
+baseurl: /iamchrissmith
 
 # Site live URL
-url: http://gayan.me
+# url: http://iamchrissmith.io
 
-# Localhost 
-# url: http://127.0.0.1:4000  
+# Localhost
+url: http://127.0.0.1:4000
 
 # Harmony theme configuration. Please change accordingly.
 harmony:
-  name: Harmony
+  name: I am Chris Smith,
   # Little description about your site
-  description: Harmony is free responsive jekyll theme.
+  description: Software Developer
   # 'meta_description:' Write an awesome description for your new site here.
-  # It will appear in your document head meta (for Google search results) and 
+  # It will appear in your document head meta (for Google search results) and
   # in your feed.xml site description.
-  meta_description: > # 
+  meta_description: > #
    Harmony is a free responsive jekyll theme by Gayan Virajith
-   and Maheshika Lakmali. Sourced on Github - 
+   and Maheshika Lakmali. Sourced on Github -
    https://github.com/gayanvirajith/harmony
-  basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
+  basetheme: darken # pre defined thmes are darken, blue-water, redish.
   author: # Author details
     name: Gayan Virajith
     email: gayanvirajith@gmail.com
@@ -31,25 +31,26 @@ harmony:
   google_analytics_key: UA-xxxx-x
 
   # Profile links, leave blank to ignore
-  social: 
-    github: gayanvirajith
-    twitter: gayanvirajith
-    facebook: gayanvirajith
-    gplus: +GayanVirajith
-    dribble: gayan
-    pinterest: 
+  social:
+    github: iamchrissmith
+    twitter: iamchrissmith
+    linkedin: iamchrisryansmith
+    # facebook: gayanvirajith
+    # gplus: +GayanVirajith
+    # dribble: gayan
+    # pinterest:
   # Toggle disclaimer in footer
   show_disclaimer: true
 
-# Conversion / Build settings 
+# Conversion / Build settings
 markdown:    kramdown
 # This is how you put pygments config in jekyll 2.0 instead of pygments: true
-highlighter: pygments 
+highlighter: pygments
 
 # Permalinks
 permalink:        pretty
 
-exclude: 
+exclude:
   - CNAME
   - Gemfile
   - Rakefile

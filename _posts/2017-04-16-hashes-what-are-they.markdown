@@ -23,64 +23,9 @@ So how can a hash be so fast compared to an array.  As I am learning with Ruby, 
 
 So here is what I understand is happening: When you create a new `Hash` ruby instantiates a new Hash object.  This object starts with 11 `bin`s (Arrays).  If any `bin` has more than 5 elements in it, ruby reorganizes things and increases the number of `bin`s.  This process can be a bit slow but only has to happen once. When you are looking for something in the `Hash` ruby is smart enough to calculate its `bin` again and only look inside that `array`.  This sounds an awful like a search tree algorithm which is why we go from a O(n) for array searches to O(1) for hash search times.
 
-
-
 Further Reading:
 - [Hash Lookup from Engine Yard](https://blog.engineyard.com/2013/hash-lookup-in-ruby-why-is-it-so-fast){:target="blank"}
 - [How the hash works](https://launchschool.com/blog/how-the-hash-works-in-ruby){:target="blank"}
-
-
-
-Just a sample post to show some of the *typography* elements supported from
-**harmony** theme.
-
-___
-
-A blockquote:
-
-> Donec in mollis eros, nec rutrum turpis. **Curabitur** sem elit, semper nec volutpat quis, laoreet et sapien. In felis erat, rhoncus sed pellentesque mollis, tincidunt quis elit.
-> - By Someone
-
-## Header 2
-
-Duis lacinia commodo dui, vel aliquam metus hendrerit eu. Integer et scelerisque dui. Sed nec molestie quam. Donec sit amet nisl a massa commodo ultrices nec quis nunc. Aenean aliquet eu arcu adipiscing dignissim. Nunc dictum elit vitae dolor molestie aliquet.
-
-
-Example code:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-
-A list:
-
-- Praesent nisi elit, bibendum ut consectetur ac, aliquet in nunc
-- Donec ante est, volutpat in mi et, pulvinar congue dolor.
-- Quisque ultrices pulvinar sollicitudin.
-- Duis elementum odio eu euismod suscipit.
-- Integer enim lorem, interdum sit amet consectetur non, bibendum eget neque.
-
-A numbered list:
-
-1. Praesent nisi elit, bibendum ut consectetur ac, aliquet in nunc.
-2. Donec ante est, volutpat in mi et, pulvinar congue dolor.
-3. Quisque ultrices pulvinar sollicitudin.
-4. Duis elementum odio eu euismod suscipit.
-5. Integer enim lorem, interdum sit amet consectetur non, bibendum eget neque.
-
-Definition list:
-
-Curabitur cursus magna eu sem cursus
-: ac ultrices urna pharetra.
-: Duis scelerisque ipsum eu luctus elementum.
-
-Pellentesque habitant morbi tristique senectus
-: Curabitur malesuada lacus ac gravida porttitor
-: Duis sodales feugiat lorem et mollis.
-
-Want me to suggest something? Please [Send me a request](https://github.com/web-create/harmony/issues/new)
+- [Ruby & Big O](http://blog.honeybadger.io/a-rubyist-s-guide-to-big-o-notation/){:target="blank"}
+- [How Ruby Uses Memory](https://www.sitepoint.com/ruby-uses-memory/){:target="blank"}
+- [How Ruby Uses Memory](https://www.sitepoint.com/ruby-uses-memory/){:target="blank"}

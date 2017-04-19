@@ -9,7 +9,7 @@ categories:
 permalink: ruby-send-method-exploration
 ---
 
-A patterning I see recurring in my programming is that I need to take an argument, then based on what it is do something, for instance:
+A pattern I see recurring in my programming is that I need to take an argument, then based on what it is do something, for instance:
 {% highlight ruby %}
 def my_method(array_of_args, action)
   if action == :sum

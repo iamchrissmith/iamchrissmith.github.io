@@ -9,18 +9,18 @@ categories:
 - logic
 ---
 
-## Mod 1 – a test of character
 
 I must admit, I had doubts if Turing was the right fit for me. I am a self-taught WordPress developer had been successfully running my own web development company for years. I was worried that I might not get the most out of the program, because I already had a fair amount of coding knowledge. And yet, I was at a point where I wanted to dive deeper into coding and be immersed into a community of similar minded people. So I took the plunge.
 
+## Mod 1 – a test of character
 Quickly it became clear, that I had to find my own way of succeeding at Turing. By that I don’t mean just getting the projects done on time but going further to be able to challenge myself and at the same time contribute to the community in the best way I can.
 
 It’s a hard path and a difficult balance to strike. And I am grateful for the support I got from the instructors and the feedback from my cohort and other Turing students. Family and friends who know me well have commented that I look fulfilled and have rediscovered an intrinsic sense of motivation. I take that as a good reality check and as a confirmation that starting the program has so far been a good decision.  
 
-Most importantly though is the feeling that I am looking forward to starting Mod 2. 
+Most importantly though is the feeling that I am looking forward to starting Mod 2.
 
 ## Recursion
-![Worlds Folding - Dr. Strange Inception](assets/images/inception.jpg "Inception / Dr. Strange image")
+![Worlds Folding - Dr. Strange Inception](/assets/images/inception.jpg "Inception / Dr. Strange image")
 [source](http://www.gizmodo.co.uk/2016/04/first-doctor-strange-trailer-shows-marvel-doing-an-inception/){:target="blank"}
 
 One of the hardest and most fun concept I learned during mod 1 was 'recursion'.  This at times can feel like something out of the move Inception, but it was one of the most powerful tools I learned.  It allows you to loop over a part of your program until a condition is met. Each layer in puts a temporary pause on the layer that spawned it and then ruby cycles back up through the layers completing the remaining program at each level before returning to the level that spawned it.

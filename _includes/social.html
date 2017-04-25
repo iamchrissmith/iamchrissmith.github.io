@@ -1,13 +1,13 @@
 <h6>Follow me</h6>
 
-<ul class="social-media">
-
-
     {% if site.harmony.social.twitter %}
     <li>
         <a title="{{ site.harmony.social.twitter }} on Twitter"
             href="https://twitter.com/{{ site.harmony.social.twitter }}"
-            class="twitter wc-img-replace" target="_blank">Twitter</a>
+            aria-label="Twitter" class="twitter wc-img-replace" target="_blank">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span>
+        </a>
     </li>
     {% endif %}
 
@@ -15,7 +15,10 @@
     <li>
         <a title="{{ site.harmony.social.github }} on Github"
             href="https://github.com/{{ site.harmony.social.github }}"
-            class="github wc-img-replace" target="_blank">Github</a>
+            aria-label="GitHub" class="github wc-img-replace" target="_blank">
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <span class="sr-only">Github</span>
+        </a>
     </li>
     {% endif %}
 
@@ -23,31 +26,10 @@
     <li>
         <a title="{{ site.harmony.social.linkedin }} on LinkedIn"
             href="https://linkedin.com/{{ site.harmony.social.linkedin }}"
-            class="linkedin wc-img-replace" target="_blank">LinkedIn</a>
-    </li>
-    {% endif %}
-
-    {% if site.harmony.social.gplus %}
-    <li>
-        <a title="{{ site.harmony.social.gplus }} on Google Plus"
-            href="https://plus.google.com/{{ site.harmony.social.gplus }}"
-            class="google wc-img-replace" target="_blank">Google</a>
-    </li>
-    {% endif %}
-
-    {% if site.harmony.social.dribble %}
-    <li>
-        <a title="{{ site.harmony.social.dribble }} on Dribble"
-            href="https://dribbble.com/{{ site.harmony.social.dribble }}"
-            class="dribble wc-img-replace" target="_blank">Dribble</a>
-    </li>
-    {% endif %}
-
-    {% if site.harmony.social.pinterest %}
-    <li>
-        <a title="{{ site.harmony.social.pinterest }} on Pinterest"
-            href="https://www.pinterest.com/{{ site.harmony.social.pinterest }}"
-            class="pinterest wc-img-replace" target="_blank">Pinterest</a>
+            aria-label="LinkedIn" class="linkedin wc-img-replace" target="_blank">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span>
+        </a>
     </li>
     {% endif %}
 

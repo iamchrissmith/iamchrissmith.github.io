@@ -23,7 +23,7 @@ Most importantly though is the feeling that I am looking forward to starting Mod
 ![Worlds Folding - Dr. Strange Inception](/assets/images/inception.jpg "Inception / Dr. Strange image")
 [source](http://www.gizmodo.co.uk/2016/04/first-doctor-strange-trailer-shows-marvel-doing-an-inception/){:target="blank"}
 
-One of the hardest and most fun concept I learned during mod 1 was 'recursion'.  This at times can feel like something out of the move Inception, but it was one of the most powerful tools I learned.  It allows you to loop over a part of your program until a condition is met. Each layer in puts a temporary pause on the layer that spawned it and then ruby cycles back up through the layers completing the remaining program at each level before returning to the level that spawned it.
+One of the hardest and most fun concepts I learned during mod 1 was 'recursion'.  This at times can feel like something out of the movie Inception, but it was one of the most powerful tools I learned.  It allows you to loop over a part of your program until a condition is met. Each new layer puts a temporary pause on the layer that spawned it and then ruby cycles back up through the layers completing the remaining program at each level before returning to the level that spawned it.
 
 Here is an example of a recursive method used to implement the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes){:target="blank"} to find prime numbers:
 
@@ -51,18 +51,20 @@ Sieve.new(10).primes
 {% endhighlight %}
 
 This creates an array of every number from 2 to the limit (in this case 10) then removes the ones that are multiples of that one then moves on to the next one. The method calls itself (`primes(start)`) with a new starting point in the array until we reach the last number in the array (`if start != @range.last`).  If we were to look at the `@range` array through each step we would see:
-```
-[2,3,4,5,6,7,8,9,10]
-[2,3,5,7,9]
-[2,3,5,7]
-[2,3,5,7]
-```
-as it cycled through each level.  However is we insert a `p @range` **after** `primes(start)` (our recursion) is called we would see the following output in the terminal:
-```
-[2, 3, 5, 7]
-[2, 3, 5, 7]
-[2, 3, 5, 7]
-```
+{% highlight ruby %}
+[2,3,4,5,6,7,8,9,10] # initialize
+[2,3,5,7,9] # first run through primes
+[2,3,5,7] # recursion 1 - now start = 3
+[2,3,5,7] # recursion 2 - now start = 5
+[2,3,5,7] # recursion 3 - now start = 7
+{% endhighlight %}
+as it cycled through each level.  However if we insert a `p @range` **after** the `if start != @range.last ... end` (which contains our recursion point) is called we would see the following output in the terminal:
+{% highlight ruby %}
+[2, 3, 5, 7] # recursion 3's print
+[2, 3, 5, 7] # recursion 2's print
+[2, 3, 5, 7] # recursion 1's print
+[2, 3, 5, 7] # first run's print
+{% endhighlight %}
 Each time ruby hits the `primes(start)` line we "drop down to a new level of the dream world" (a la Inception).  On that level we execute the `primes` method from the start and if we hit `primes(start)` again, we drop to a level deeper.  We keep doing this until `primes` returns (i.e. until it hits `@range` on the last line).  This returns `@range` back to the previous level which then runs through the rest of its method (in this example printing `@range` to the terminal). It does this for each level until it returns back to the highest level and the program concludes.
 
 Recursion can be very useful for avoiding `while` or `until` loops as well as dealing with smart node navigation (see ["Smart Nodes all the time!"](https://iamchrissmith.io/blog/ruby/logic/2017/04/15/smart-nodes/) for a perspective on smart nodes).

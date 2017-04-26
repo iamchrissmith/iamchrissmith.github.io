@@ -42,6 +42,10 @@ highlighter: rouge
 # Permalinks
 permalink:        pretty
 
+# Collections
+collections:
+  - projects
+
 exclude:
   - CNAME
   - Gemfile

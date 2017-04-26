@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div id="home" class="page-content wc-container">
+  <h1>Projects</h1>
+    <div class="projects">
+      {% assign projects = site.projects | sort: 'date' %}
+      {% for project in projects reversed %}
+      <article class="project">
+        <img src="/assets/images/{{ project.image }}"/>
+        <h2>
+            {{ project.title }}
+        </h2>
+        <p>
+          {{ project.excerpt }}
+        </p>
+        <p>
+          {% if project.view_link %}
+          <a class="more" href="{{ project.view_link }}" title="{{ project.title}} View">
+            <i class="fa fa-eye"></i><span>View Project</span>
+        </a>{% endif %} {% if project.code_link %}<a href="{{ project.code_link }}" class="more"><i class="fa fa-code"></i><span>View Code</span></a>{% endif %}
+        </p>
+      </article>
+  		{% endfor %}
+	</div>
+</div>

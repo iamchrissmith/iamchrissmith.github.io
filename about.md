@@ -4,7 +4,7 @@ title: About me
 permalink: /about/
 ---
 
-Hi, I am Chris smith, a software developer student at Turing School of Software and Design.
+Hi, I am Chris Smith, a software developer student at Turing School of Software and Design.
 
 My background includes experience as a small business owner, and a government and business technology manager.
 

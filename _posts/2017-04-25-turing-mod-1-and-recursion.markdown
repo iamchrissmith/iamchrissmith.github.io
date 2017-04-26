@@ -10,7 +10,7 @@ categories:
 ---
 
 
-I must admit, I had doubts if Turing was the right fit for me. I am a self-taught WordPress developer had been successfully running my own web development company for years. I was worried that I might not get the most out of the program, because I already had a fair amount of coding knowledge. And yet, I was at a point where I wanted to dive deeper into coding and be immersed into a community of similar minded people. So I took the plunge.
+I must admit, I had my doubts if Turing would be the right fit for me. I am a self-taught WordPress developer had been successfully running my own web development company for years. I was worried that I might not get the most out of the program, because I already had a fair amount of coding knowledge. And yet, I was at a point where I wanted to dive deeper into coding and be immersed into a community of similar minded people. So I took the plunge.
 
 ## Mod 1 – a test of character
 Quickly it became clear, that I had to find my own way of succeeding at Turing. By that I don’t mean just getting the projects done on time but going further to be able to challenge myself and at the same time contribute to the community in the best way I can.

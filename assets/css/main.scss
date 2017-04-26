@@ -283,6 +283,23 @@ footer.main-footer {
     text-align: center;
   }
 
+  ul.social-media li > a {
+    display:block;
+    background: none;
+    i {
+      transition: color 0.2s;
+      font-size: 28px;
+      color:white;
+    }
+    &:hover {
+      background:none;
+      i {
+        color:#da4939;
+      }
+    }
+  }
+
+
  ul.social-media {
   text-align:left;
   padding: 0 0 10px 0;
@@ -290,77 +307,10 @@ footer.main-footer {
     display:inline-block;
   }
   li > a {
-    width: 32px;
-    height: 32px;
-    background: $base-07;
-    background-image: url("./images/socials-icons.svg");
-    background-size: 224px 64px;
-    border-radius: 0.25em;
-    @include transition(background-color 0.2s);
     border-bottom-color: transparent;
-
-    &:hover {
-      background-color: $base-08;
-    }
   }
 
-  li a.twitter {
-    background-position: 0 0;
-      &:hover {
-        background-position: 0 -32px;
-    }
   }
-
-  li a.github {
-    background-position: -32px 0;
-    &:hover {
-      background-position: -32px -32px;
-    }
-  }
-
-  li a.linkedin {
-    background-position: -64px 0;
-    &:hover {
-      background-position: -64px -32px;
-    }
-  }
-
-  li a.dribble {
-    background-position: -96px 0;
-    &:hover {
-      background-position: -96px -32px;
-    }
-  }
-
-  li a.google {
-    background-position: -128px 0;
-    &:hover {
-      background-position: -128px -32px;
-    }
-  }
-
-  li a.pinterest {
-      background-position: -196px 0;
-      &:hover {
-        background-position: -196px -32px;
-      }
-    }
-  }
-}
-
-.no-svg footer.main-footer ul.social-media li a {
-  width: 32px;
-    height: 32px;
-    background-color: $base-07;
-    background-image: url("./images/socials-icons.png");
-    background-size: 224px 64px;
-    border-radius: 0.25em;
-    @include transition(background-color 0.2s);
-    border-bottom-color: transparent;
-
-    &:hover {
-      background-color: $base-08;
-    }
 }
 
 div.page-content {

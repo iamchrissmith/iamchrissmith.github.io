@@ -11,7 +11,6 @@ categories:
 
 
 ## Recursion - Favorite Technical Concept from Mod 1
-
 One of the hardest and most fun concepts I learned during mod 1 was 'recursion'.  This at times can feel like something out of the movie Inception, but it was one of the most powerful tools I learned.  It allows you to loop over a part of your program until a condition is met. Each new layer puts a temporary pause on the layer that spawned it and then ruby cycles back up through the layers completing the remaining program at each level before returning to the level that spawned it.
 
 ![Worlds Folding - Dr. Strange Inception](/assets/images/inception.jpg "Inception / Dr. Strange image")

@@ -11,10 +11,11 @@ categories:
 
 
 ## Recursion - Favorite Technical Concept from Mod 1
-![Worlds Folding - Dr. Strange Inception](/assets/images/inception.jpg "Inception / Dr. Strange image")
-[source](http://www.gizmodo.co.uk/2016/04/first-doctor-strange-trailer-shows-marvel-doing-an-inception/){:target="blank"}
 
 One of the hardest and most fun concepts I learned during mod 1 was 'recursion'.  This at times can feel like something out of the movie Inception, but it was one of the most powerful tools I learned.  It allows you to loop over a part of your program until a condition is met. Each new layer puts a temporary pause on the layer that spawned it and then ruby cycles back up through the layers completing the remaining program at each level before returning to the level that spawned it.
+
+![Worlds Folding - Dr. Strange Inception](/assets/images/inception.jpg "Inception / Dr. Strange image")
+[source](http://www.gizmodo.co.uk/2016/04/first-doctor-strange-trailer-shows-marvel-doing-an-inception/){:target ="blank"}
 
 Here is an example of a recursive method used to implement the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes){:target="blank"} to find prime numbers:
 

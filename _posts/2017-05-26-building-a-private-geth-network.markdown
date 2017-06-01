@@ -72,7 +72,7 @@ Lets dig into these a bit:
 - `--verbosity`: This will determine how much you see in your logs (6 is the highest).  While trying to get everything set up, I prefer 5, but after that a 4 usually is good in my limited experience.
 - `2>> ~/ethchain/ethchain.log`: this pipes your logs into this file.
 
-Once your node is started you can open a new terminal window, ssh back into your server.  Once there, you can enter `tail -F ~//.log`, this will stream your logs in this terminal window.
+Once your node is started you can open a new terminal window, ssh back into your server.  Once there, you can enter `tail -F ~/ethchain/ethchain.log`, this will stream your logs in this terminal window.
 
 Assuming this is all working, you now have a Geth root node running!  Congratulations!!!
 

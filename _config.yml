@@ -44,8 +44,10 @@ permalink:        pretty
 
 # Collections
 collections:
-  - projects
-  - resources
+  resources:
+    output: true
+    permalink: /:collection/:name
+  projects:
 
 exclude:
   - CNAME

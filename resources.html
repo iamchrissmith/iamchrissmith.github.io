@@ -1,0 +1,18 @@
+---
+layout: default
+title: Resources
+---
+<div class="page-content wc-container">
+  <h1>Resources</h1>
+  {% for resource in site.resources %}
+  	{% capture currentyear %}{{resource.date | date: "%Y"}}{% endcapture %}
+  	{% if currentyear != year %}
+    	{% unless forloop.first %}</ul>{% endunless %}
+    		<h5>{{ currentyear }}</h5>
+    		<ul class="resources">
+    		{% capture year %}{{currentyear}}{% endcapture %}
+  		{% endif %}
+    <li><a href="{{ resource.url | prepend: site.baseurl }}">{{ resource.title }}</a></li>
+    {% if forloop.last %}</ul>{% endif %}
+{% endfor %}
+</div>

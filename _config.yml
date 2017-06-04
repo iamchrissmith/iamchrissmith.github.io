@@ -45,6 +45,7 @@ permalink:        pretty
 # Collections
 collections:
   - projects
+  - resources
 
 exclude:
   - CNAME

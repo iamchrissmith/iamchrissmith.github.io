@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Up and Running with a Private Go-Ethereum Network"
+title:  "Up and Running with a Private Go-Ethereum Network Part 2"
 date:   2017-06-01 09:38:00
 description: The second of several ethereum, Go-Ethereum and solidity posts about getting a test net setup.
 categories:

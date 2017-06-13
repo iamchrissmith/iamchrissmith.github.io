@@ -34,6 +34,6 @@ stdout_logfile=/var/log/supervisor/geth.out.log
 ```
 5. Now we need to restart supervisor and get the process started: `sudo supervisorctl reload`
 
-To confirm that your node is now running you can `geth attach`.  I had to use `geth attach 127.0.0.1:8545` (see this [GitHub issue](https://github.com/ethereum/go-ethereum/issues/1908){:target=>"blank"} for more information about different `attach` commands if this doesn't work for you).
+To confirm that your node is now running you can `geth attach`.  I had to use `geth attach http://127.0.0.1:8545` (see this [GitHub issue](https://github.com/ethereum/go-ethereum/issues/1908){:target=>"blank"} for more information about different `attach` commands if this doesn't work for you).
 
 You should now be in the Geth console.  You can now leave your SSH connection to the server and your Geth node should stay running.

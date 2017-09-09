@@ -11,10 +11,10 @@ categories:
 - NodeJS
 ---
 
-When our Turing cohort explored ExpressJS this module, there was a quick comment at the bottom of one of our lessons about the `next()` function in ExpressJS. While I was in the middle of a project and figuring out API endpoints and using [Knex](http://knexjs.org/){:target=>"blank"} with NodeJS, I could not fully absorb the possibilities of `next()`.  Having now gone through that project, I wanted to circle back and gain a better understanding of how `next()` worked and how to look for patterns where I might want to use it.  In short, `next()` sends the request to the next (those clever developers with their fancy names) function that handles the request. Still unclear?  I know I certainly was when I first looked at `next()`.
+When our Turing cohort explored ExpressJS this module, there was a quick comment at the bottom of one of our lessons about the `next()` function in ExpressJS. While I was in the middle of a project and figuring out API endpoints and using [Knex](http://knexjs.org/){:target=>"blank"} with NodeJS, I could not fully absorb the possibilities of `next()`.  Having now gone through that project, I wanted to circle back and gain a better understanding of how `next()` worked and how to look for patterns where I might want to use it.  In short, `next()` sends the request to the next function (those clever developers with their fancy names) that handles the request. Still unclear?  I know I certainly was when I first looked at `next()`.
 
 ## Routes VS Middleware
-So the first thing I had to understand is the difference between Routes and Middleware.  The last tutorial in the resources list really helped me wrap my head around this.  The TLDR; of the difference is that routes are responsible for concluding a successful request (usually by `.send()`ing a response) and middleware sites between the request and the routes and does things to the request (including possibly terminating it early).  One of the confusing things is that ExpressJS can have multiple actions on a single route using `next()`. Lets explore this with just routes for now:
+So the first thing I had to understand is the difference between Routes and Middleware.  The last tutorial in the resources list really helped me wrap my head around this.  The TLDR; of the difference is that routes are responsible for concluding a successful request (usually by `.send()`ing a response) and middleware sites between the request and the routes and does things to the request (including possibly terminating it early because of a problem).  One of the confusing things is that ExpressJS can have multiple actions on a single route using `next()`. Let us explore this with just routes for now:
 
 ```javascript
 var app = require("express")();
@@ -61,9 +61,9 @@ var app = require("express")();
 app.use("/user-profile", function(request, response, next){
   // check that the user is signed in.
   // if she/he is:
-  next();
+      next();
   // else
-  // return a you need to login message, redirect to the login page, or just send her/him a 404
+  // return a not logged in message, redirect to the login page, or just send her/him a 404
 });
 
 app.get("/user-profile", function(request, response, next){
@@ -76,6 +76,16 @@ Other uses of `next()` and middleware:
 * Writing to logs
 * Serving static assets
 * Tracking what time a request was received
+
+Also, watch out that you use your middleware first and then your routes.  If you have
+```
+Middleware 1 -> next
+Route 1 -> next
+Middleware 2 ->
+Route 2 -> send
+```
+
+Middleware 2 will never get hit because `next()` in a route sends to the next route function never a middleware function.
 
 In my next project, I am planning on using ExpressJS along with Ethereum contracts, so I think I will be using this to check if the user has MetaMask installed or a RPC connection available and if not, sending them to an instructions page that explains how to get those set up.
 

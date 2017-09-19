@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Imnportance of contributing to Open Source"
+title:  "Contributing to Open Source"
 date:   2017-09-19 09:30:00
-description: Some explanations and explorations about how next() in ExpressJS middleware can be helpful.
+description: Contributing to Rails Girls Summer of Code OSS project.
 categories:
 - blog
 - Open-Source

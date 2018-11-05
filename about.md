@@ -30,7 +30,7 @@ Posner Center International Nonprofit 2015 Hackathon, Member of Winning Team
 
 ### Contact me
 
-Find me on [LinkedIn][linkedin] / [Github][github] / [Twitter][Twitter] or just say [`Hello`](me+website@chrisryansmith.com).
+Find me on [LinkedIn][linkedin] / [Github][github] / [Twitter][Twitter].
 
 [github]: https://github.com/iamchrissmith
 [linkedin]: https://www.linkedin.com/in/iamchrisryansmith/

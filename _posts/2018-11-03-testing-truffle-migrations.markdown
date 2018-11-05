@@ -42,9 +42,9 @@ After presenting my talk and thinking about the different uses of Truffle migrat
 
 Truffle migrations serve two purposes: 
 1. They setup the clean room environment for your `truffle test`ing. 
-2. More importantly, if you want to use Truffle to manage your singleton contracts on test and mainnets, they are how you deploy and potentially upgrade contracts.
+2. More importantly, if you want to use Truffle to manage your singleton contracts on test- and mainnets, they are how you deploy and potentially upgrade contracts.
 
-It is this second use case that lead me to think about testing truffle migrations.  In most simple Dapp tutorials you only need to launch one contract.  If it is an ERC-20 token contract, it could be important how it is configured.  If you didn't hard code your `decimalUnits`, `totalSupply`, and `symbol` into your contract, you will have to set those via your constructor when making the new contract call.  Lets say you have this contract:
+It is this second use case that led me to think about testing truffle migrations.  In most simple Dapp tutorials you only need to launch one contract.  However, even if it is an ERC-20 token contract, it could be important how it is configured.  If you didn't hard code your `decimalUnits`, `totalSupply`, and `symbol` into your contract, you will have to set those via your constructor when making the new contract call.  Lets say you have this contract:
 
 ```javascript
 pragma solidity 0.4.24;
@@ -88,7 +88,7 @@ module.exports = function(deployer, network, accounts) {
 
 Great, you now have a very simple ERC-20 and a migration to launch it.  You can launch ganache locally, run `truffle migrate` and start interacting with your new token on your local testnet.
 
-However, once your ready to go to Rinkeby, or even Mainnet, you're trusting that that migration was setup correctly.  If you forgot to convert your token initial supply based on decimal units, you might launch a token with `100` as the initial supply and have an impossibly small supply of tokens.  What if you change your token contract to improve it and have ot introduce a new constructor parameter.  This will break your migration and you might not discover it until you try to launch.  These all sound like good reasons to write a test.  You want to know your code works now as expected and will continue to work in the future as expected.
+However, once your ready to go to Rinkeby, or even Mainnet, you're trusting that that migration was setup correctly.  If you forgot to convert your token's initial supply based on decimal units, you might launch a token with `100` as the initial supply and have an impossibly small supply of tokens.  What if you change your token contract to improve it and have ot introduce a new constructor parameter.  This will break your migration and you might not discover it until you try to launch.  These all sound like good reasons to write a test.  You want to know your code works now as expected and will continue to work in the future as expected.
 
 Thankfully, Truffle gives us a really great way to test our migrations.  (Remember, `MyContract.deployed()` from above that I said I didn't like to use in my tests...) To test my Token migration here I could have a test file like:
 
@@ -135,3 +135,6 @@ This allows me to ensure my migrations, a critical part of my application, will 
 
 In this simple example it may not seem that important, but as you get into more complicated smart contracts and interactions between smart contracts, knowing that your migrations are going to deploy your system correctly, can be incredibly important.
 
+One such example, I have run into is with upgradeable smart contracts. When the smart contract that holds the functionality gets launched it needs to be initialized.  We can't use constructors with implementation contracts because the proxies we launch later won't get the constructor state run.  However, in order to ensure the continued and expected functionality of that implementation, it needs to be initialized.  This is a great example where a simple oversight could lead to disasterous consequences... say if you don't initialized and there for the owner of your implementation is never set (for more details about how important this is see [CoinTelegraph's the Parity Multisig Hack post mortem from Nov 2017](https://cointelegraph.com/news/parity-multisig-wallet-hacked-or-how-come){:target=>"blank"}).
+
+I'm hoping to write more about upgradeable contracts, implementations and initialization in the near future, but in the meantime if you want to learn more about those topics, check out this great blog article from [Zeppelin and Elena Nadolinski](https://blog.zeppelinos.org/proxy-patterns/){:target=>"blank"}.

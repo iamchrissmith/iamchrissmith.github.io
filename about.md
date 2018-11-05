@@ -12,21 +12,21 @@ I enjoy tackling tough technical challenges as well as teaching and explaining t
 
 #### SPEAKING
 
-"Smart Contract Testing Strategies" TruffleCon
-"Solidity 101" WyoHackathon
-"Using Truffle for Smart Contract Development and Testing" EthDenver
+* "Smart Contract Testing Strategies" TruffleCon
+* "Solidity 101" WyoHackathon
+* "Using Truffle for Smart Contract Development and Testing" EthDenver
 
 #### COMMUNITY INVOLVEMENT
 
-ConsenSys Academy Developer Course 2018 Technical Mentor
-EthDenver 2018 Hackathon Mentor
-Blockchain for Social Impact Incubator 2018 Mentor
-WyoHackathon 2018 Hackathon Mentor
-AngelHacks DC 2018 Hackathon Mentor
-ConsenSys Hackathon Dubai 2017 Member of Winning Team
-EthWaterloo Hackathon 2017 Participant
-Ethereum Denver 2017 Hackathon Participant
-Posner Center International Nonprofit 2015 Hackathon, Member of Winning Team
+* ConsenSys Academy Developer Course 2018 Technical Mentor
+* EthDenver 2018 Hackathon Mentor
+* Blockchain for Social Impact Incubator 2018 Mentor
+* WyoHackathon 2018 Hackathon Mentor
+* AngelHacks DC 2018 Hackathon Mentor
+* ConsenSys Hackathon Dubai 2017 Member of Winning Team
+* EthWaterloo Hackathon 2017 Participant
+* Ethereum Denver 2017 Hackathon Participant
+* Posner Center International Nonprofit 2015 Hackathon, Member of Winning Team
 
 ### Contact me
 

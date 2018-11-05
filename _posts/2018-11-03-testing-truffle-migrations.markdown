@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Testing Truffle Migrations"
-date:   2018-11-09 16:50:00
+date:   2018-11-04 16:50:00
 description: Some thoughts on how tests can be used to develop better migrations in Truffle.
 categories:
 - blog
@@ -13,7 +13,7 @@ categories:
 - Migrations
 ---
 
-At the beginning of October, I spoke at TrufflCon 2018 on "Smart Contract Testing Strategies".  [You can view the code and presentation from that talk on Github](https://github.com/iamchrissmith/trufflecon-2018-testing-strategies){:target=>"blank"}. During that preparing for that talk, I looked at a lot of smart contract tutorials that showed smart contracts tests using `MyContract.deployed()` in their mocha tests.  While this benefits, your tests by making use of the Truffle [Clean Room Environment](https://truffleframework.com/docs/truffle/testing/testing-your-contracts#clean-room-environment){:target=>"blank"} and speeds up your tests by only deploying a new set of contracts once per test file, I do not believe this leads to clean, easy to understand unit tests for your smart contracts.  As I describe in that talk, I believe it is better to use `beforeEach` blocks in your tests to deploy new contracts for each test, creating a clean state for test to run in.  For instance:
+At the beginning of October, I spoke at TrufflCon 2018 on "Smart Contract Testing Strategies".  [You can view the code and presentation from that talk on Github](https://github.com/iamchrissmith/trufflecon-2018-testing-strategies){:target=>"blank"}. While preparing for that talk, I looked at a lot of smart contract tutorials that showed smart contract tests using `MyContract.deployed()` in their mocha tests.  While this benefits, your tests by making use of the Truffle [Clean Room Environment](https://truffleframework.com/docs/truffle/testing/testing-your-contracts#clean-room-environment){:target=>"blank"} and speeds up your tests by only deploying a new set of contracts once per test file, I do not believe this leads to clean, easy to understand unit tests for your smart contracts.  As I describe in that talk, I believe it is better to use `beforeEach` blocks in your tests to deploy new contracts for each test, creating a clean state in which each individual test can run.  For instance:
 ```javascript
 const MyContractAbstraction = artifacts.require('MyContract');
 
@@ -28,6 +28,9 @@ contract('My Contract', function(accounts) {
   describe('.transfer', () => {
     it('test that transfer works', async () => {
       // some tests that start with a fresh MyContract contract instance
+    });
+    it('test that transfer works again', async () => {
+      // the balance of this test would be unaffected by the first test
     });
   });
 });

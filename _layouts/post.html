@@ -9,8 +9,8 @@ layout: default
 		<p class="post-meta">
 			{% if page.categories.length > 0 %}
       <span class="categories">
-			<!-- {{ page.categories | array_to_sentence_string }} -->
-			{{ page.categories | sort | join: ", " }}
+			{{ page.categories | array_to_sentence_string }}
+			<!-- {{ page.categories | sort | join: ", " }} -->
       </span> |
 	    {% endif %}
 	    <span class="post-date">

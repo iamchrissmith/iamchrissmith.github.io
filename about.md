@@ -4,11 +4,11 @@ title: About me
 permalink: /about/
 ---
 
-Hi, I am Chris Smith, a technical lead and senior software developer working in the blockchain industry.  
+Hi, I am Chris Smith, a technical lead and senior software engineer working in start-ups and formerly in the blockchain industry.  
 
 My background includes experience as a small business owner, and as a government and business technology manager.
 
-I enjoy tackling tough technical challenges as well as teaching and explaining those solutions. Recently, I have been speaking and mentoring at Ethereum conferences:
+I enjoy tackling tough technical challenges as well as teaching and explaining those solutions. In the past, I have been speaking and mentoring at Ethereum conferences:
 
 #### SPEAKING
 
@@ -35,3 +35,7 @@ Find me on [LinkedIn][linkedin] / [Github][github] / [Twitter][Twitter].
 [github]: https://github.com/iamchrissmith
 [linkedin]: https://www.linkedin.com/in/iamchrisryansmith/
 [twitter]: https://twitter.com/iamchrissmith
+
+## Photography
+
+While I have always enjoyed photography, in recent years I have been getting more serious about it.  You can check out my <a href="https://photos.iamchrissmith.io">photography portfolio here</a>, feel free to reach out if you'd like to talk photos or have any questions.

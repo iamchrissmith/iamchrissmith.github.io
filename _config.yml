@@ -11,9 +11,9 @@ url: https://iamchrissmith.io
 
 # Harmony theme configuration. Please change accordingly.
 harmony:
-  name: i am Chris Smith,
+  name: i am Chris Smith
   # Little description about your site
-  description: Software Developer
+  description: Protocol Engineer, Security Researcher, Software Consultant
   # 'meta_description:' Write an awesome description for your new site here.
   # It will appear in your document head meta (for Google search results) and
   # in your feed.xml site description.
@@ -21,7 +21,6 @@ harmony:
   basetheme: darken # pre defined thmes are darken, blue-water, redish.
   author: # Author details
     name: Chris Smith
-    email: me@chrisryansmith.com
     url: https://iamchrissmith.io
 
   # Google Analytics key, leave blank to ignore

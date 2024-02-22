@@ -4,7 +4,7 @@ title: About me
 permalink: /about/
 ---
 
-Hi, I am Chris Smith, a technical lead and senior software engineer working in start-ups and formerly in the blockchain industry.  
+Hi, I am Chris Smith, a security researcher, protocol engineer and advisor in the blockchain industry. In the past I have been a technical lead and senior software engineer working in start-ups.  If you'd like to find out more about my current work, visit [lefthandcypher.com][lefthandcypher].
 
 My background includes experience as a small business owner, and as a government and business technology manager.
 
@@ -12,6 +12,7 @@ I enjoy tackling tough technical challenges as well as teaching and explaining t
 
 #### SPEAKING
 
+* "Invariant Fuzzing: What is it and how it can help secure your smart contracts" EthDenver 2024
 * "Smart Contract Testing Strategies" TruffleCon
 * "Solidity 101" WyoHackathon
 * "Using Truffle for Smart Contract Development and Testing" EthDenver
@@ -30,8 +31,9 @@ I enjoy tackling tough technical challenges as well as teaching and explaining t
 
 ### Contact me
 
-Find me on [LinkedIn][linkedin] / [Github][github] / [Twitter][Twitter].
+Find me on [My Company][lefthandcypher] / [LinkedIn][linkedin] / [Github][github] / [Twitter][Twitter].
 
+[lefthandcypher]: https://lefthandcypher.com
 [github]: https://github.com/iamchrissmith
 [linkedin]: https://www.linkedin.com/in/iamchrisryansmith/
 [twitter]: https://twitter.com/iamchrissmith
